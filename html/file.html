@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Dhoni Tribute</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4a4a4a;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .dhoni-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .list-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .list-link:hover {
+            text-decoration: underline;
+        }
+
+        #cricketersList {
+            display: none;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        #cricketersList ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding: 0;
+        }
+
+        #cricketersList li {
+            position: relative;
+            padding-left: 25px; /* Space for the custom dot */
+            margin-bottom: 10px;
+        }
+
+        #cricketersList li::before {
+            content: "•"; /* The custom dot */
+            color: red;
+            font-size: 2em; /* Increase font size for a larger dot */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mahendra Singh Dhoni</h1>
+
+        <img src="C:\Users\Prakhar Singh\OneDrive\Pictures\Screenshots\MS dhoni.jpg" alt="MS Dhoni" class="dhoni-image">
+
+        <p>MS Dhoni, born July 7, 1981, is a legendary former Indian cricketer, renowned for his exceptional leadership, calm demeanor under pressure, and game-finishing abilities, particularly his famous "helicopter shot". A right-handed batsman and wicketkeeper, he is the only captain to have won all ICC trophies, including the 2007 T20 World Cup and the 2011 Cricket World Cup. His journey from a small-town boy to a national icon is a testament to his hard work and dedication, earning him deep respect and admiration both in India and worldwide.</p>
+
+        <a href="#" class="list-link" id="showCricketersLink">Click here to see a list of top 5 cricketers</a>
+
+        <div id="cricketersList">
+            <h2>Top 5 Cricketers</h2>
+            <ul>
+                <li>MS Dhoni</li>
+                <li>Sachin Tendulkar</li>
+                <li>Virat Kohli</li>
+                <li>Sir Don Bradman</li>
+                <li>Shane Warne</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('showCricketersLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            const list = document.getElementById('cricketersList');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+            } else {
+                list.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
